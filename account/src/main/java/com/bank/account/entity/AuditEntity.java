@@ -2,6 +2,8 @@ package com.bank.account.entity;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -21,8 +23,10 @@ import java.sql.Timestamp;
 @Entity
 @Getter
 @Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Table(name = "audit", schema = "account")
 public class AuditEntity {
