@@ -1,6 +1,7 @@
 package com.bank.account.dto;
 
 import com.bank.account.entity.AccountDetailsEntity;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -17,6 +18,7 @@ import java.math.BigDecimal;
  */
 @Getter
 @Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
