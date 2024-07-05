@@ -47,6 +47,7 @@ public class AccountTransferServiceImpl implements AccountTransferService {
      * @param id технический идентификатор {@link AccountTransferEntity}
      * @return {@link AccountTransferDto}
      */
+
     @Override
     public AccountTransferDto findById(Long id) {
         final AccountTransferEntity accountTransfer = repository.findById(id)
