@@ -4,6 +4,7 @@ import com.bank.transfer.dto.AccountTransferDto;
 import com.bank.transfer.entity.AccountTransferEntity;
 import com.bank.transfer.service.AccountTransferService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,12 +20,14 @@ import java.util.List;
 /**
  * Контроллер для {@link AccountTransferDto}
  */
+@Slf4j
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/account")
 public class AccountTransferController {
 
     private final AccountTransferService service;
+
 
     /**
      * @param ids список технических идентификаторов {@link AccountTransferEntity}
