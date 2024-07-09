@@ -12,6 +12,10 @@ management:
     web:
       exposure:
         include: '*'
+info:
+  build:
+    artifact: account
+    version: 0.0.1-SNAPSHOT
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5434/postgres
