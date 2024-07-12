@@ -148,10 +148,10 @@ class AccountDetailsServiceImplTest {
         when((repository.save(postMergerEntity))).thenReturn(postMergerEntity);
         when((mapper.toDto(postMergerEntity))).thenReturn(updatedDetailsDto);
 
-        AccountDetailsDto actualResult = service.update(3L, accountDetailsDto);
+        AccountDetailsDto actualResult = service.update(1L, accountDetailsDto);
 
         assertThat(actualResult).isEqualTo(updatedDetailsDto);
-        verify(repository).findById(3L);
+        verify(repository).findById(1L);
         verify(mapper).mergeToEntity(preMergerEntity, accountDetailsDto);
         verify(repository).save(postMergerEntity);
         verify(mapper).toDto(postMergerEntity);
