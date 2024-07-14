@@ -1,0 +1,48 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+    <changeSet author="Рустам" id="1672955251679-3">
+        <createTable remarks="реквизиты банка(общедоступная информация)" tableName="bank_details">
+            <column autoIncrement="true" name="id" remarks="технический идентификатор" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="bank_details_pkey"/>
+            </column>
+            <column name="bik" remarks="БИК" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="inn" remarks="ИНН" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="kpp" remarks="КПП" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="cor_account" remarks="корреспондентский счет" type="numeric(20, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="city" remarks="город, котором зарегистрирован юр. адрес банка" type="VARCHAR(180)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="joint_stock_company" remarks="акционерное общество" type="VARCHAR(15)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" remarks="имя банка" type="VARCHAR(80)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Рустам" id="1672955251679-7">
+        <addUniqueConstraint columnNames="bik" constraintName="bank_details_bik_key" tableName="bank_details"/>
+    </changeSet>
+    <changeSet author="Рустам" id="1672955251679-8">
+        <addUniqueConstraint columnNames="cor_account" constraintName="bank_details_cor_account_key" tableName="bank_details"/>
+    </changeSet>
+    <changeSet author="Рустам" id="1672955251679-9">
+        <addUniqueConstraint columnNames="inn" constraintName="bank_details_inn_key" tableName="bank_details"/>
+    </changeSet>
+    <changeSet author="Рустам" id="1672955251679-10">
+        <addUniqueConstraint columnNames="kpp" constraintName="bank_details_kpp_key" tableName="bank_details"/>
+    </changeSet>
+</databaseChangeLog>

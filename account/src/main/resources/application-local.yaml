@@ -28,3 +28,9 @@ spring:
     drop-first: ${LIQUIBASE_DROP_FIRST:false}
   application:
     name: account-app
+
+public-info-app:
+  url: http://localhost:8090/api/public-info
+
+profile-app:
+  url: http://localhost:8089/api/profile
