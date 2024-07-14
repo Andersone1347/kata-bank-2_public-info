@@ -65,7 +65,7 @@ public class DataUtils {
 
     public AccountDetailsDto createUpdatedDetailsDto() {
         return AccountDetailsDto.builder()
-                .id(3L)
+                .id(1L)
                 .passportId(3L)
                 .accountNumber(3L)
                 .bankDetailsId(3L)
@@ -89,7 +89,7 @@ public class DataUtils {
 
     public AccountDetailsEntity createPreMergerAccountDetailsEntity() {
         return AccountDetailsEntity.builder()
-                .id(3L)
+                .id(1L)
                 .passportId(3L)
                 .accountNumber(3L)
                 .bankDetailsId(3L)
@@ -101,7 +101,7 @@ public class DataUtils {
 
     public AccountDetailsEntity createPostMergerAccountDetailsEntity() {
         return AccountDetailsEntity.builder()
-                .id(3L)
+                .id(1L)
                 .passportId(1L)
                 .accountNumber(1L)
                 .bankDetailsId(1L)
