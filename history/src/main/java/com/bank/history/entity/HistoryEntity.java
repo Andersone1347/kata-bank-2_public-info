@@ -1,10 +1,6 @@
 package com.bank.history.entity;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.Column;
@@ -20,8 +16,10 @@ import javax.persistence.Table;
 @Entity
 @Getter
 @Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Table(name = "history", schema = "history")
 public class HistoryEntity {
