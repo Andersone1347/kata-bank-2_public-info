@@ -19,7 +19,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
-    private final static String ENTITY_CONFLICT_MESSAGE = "Не был найден пользователь с ID ";
+    protected final static String ENTITY_CONFLICT_MESSAGE = "Не был найден пользователь с ID ";
     private final UserMapper mapper;
     private final UserRepository repository;
 
